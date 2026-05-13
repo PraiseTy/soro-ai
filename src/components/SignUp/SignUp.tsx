@@ -1,6 +1,6 @@
-import styles from './Login.module.scss';
+import styles from './SignUp.module.scss';
 
-const Login = () => {
+const SignUp = () => {
   return (
     <>
       <div className={styles.container}>
@@ -9,9 +9,13 @@ const Login = () => {
         <div className={styles.section}>
           <div className={styles.card}>
             <div className={styles.card_content}>
-              <h1>Login</h1>
+              <h1>Sign Up</h1>
               <form>
                 <div className={styles.form}>
+                  <label className={styles.label_field}>Name</label>
+                  <input type="text" className={styles.input_field} />
+                </div>
+                <div className={styles.form_down}>
                   <label className={styles.label_field}>Email</label>
                   <input type="email" className={styles.input_field} />
                 </div>
@@ -20,12 +24,12 @@ const Login = () => {
                   <input type="password" className={styles.input_field} />
                 </div>
                 <button type="submit" className={styles.button}>
-                  Login
+                Create Account
                 </button>
               </form>
               <div className={styles.cta_card}>
-                <p>Need to create an account?</p>
-                <a href="/signup">Sign Up</a>
+                <p>Already have an account?</p>
+                <a href="/login">Login</a>
               </div>
             </div>
           </div>
@@ -34,4 +38,4 @@ const Login = () => {
     </>
   );
 };
-export default Login;
+export default SignUp;

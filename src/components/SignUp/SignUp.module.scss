@@ -1,0 +1,195 @@
+body {
+  background-color: var(--beige-100);
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.section_image_container {
+  border-radius: 12px;
+  background-image: url('../../assets/images/auth-image.png');
+  background-size: 100% 100%; // Stretches the image to be taller
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 660px;
+  flex: 0 0 auto;
+  margin: 20px;
+}
+
+.card {
+  background-color: var(--white);
+  height: auto; // Changed from fixed height to auto for content-based height
+  min-height: 422px;
+  width: 100%;
+  max-width: 560px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px; // Changed from margin-left to margin for centering
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Added shadow for better design
+}
+
+.card_content {
+  padding: 32px;
+  width: 100%;
+  max-width: 496px; // Adjusted for padding
+}
+
+.label_field {
+  color: var(--grey-500);
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.input_field {
+  padding: 15px 12px;
+  border: 1px solid var(--beige-500);
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s; // Added transition for better UX
+}
+
+.input_field:focus {
+  outline: none;
+  border-color: var(--grey-900); // Added focus style
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form_down {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.button {
+  margin-top: 32px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background-color: var(--grey-900);
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s; // Added transition
+}
+
+.button:hover {
+  background-color: var(--grey-500); // Added hover style
+}
+
+.cta_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-500);
+  margin-top: 16px;
+
+  a {
+    color: var(--grey-900);
+    font-weight: 700;
+    margin-left: 8px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+// Desktop View (large screens)
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .section_image_container {
+    flex: 0 0 660px;
+  }
+
+  .section {
+    flex: 1;
+  }
+}
+
+// Tablet View
+@media (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .section_image_container {
+    display: block;
+    background-color: var(--grey-700);
+    background-image: url('../../assets/images/mobile-logo-image.png');
+    margin: 0;
+    height: 15vh;
+    width: 100%;
+    background-size: contain; // Changed to contain for full image display
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+}
+
+// Mobile View
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    //padding: 20px;
+  }
+
+  .section_image_container {
+    display: block;
+    background-color: var(--grey-700);
+    background-image: url('../../assets/images/mobile-logo-image.png');
+    margin: 0;
+    height: 10vh;
+    width: 100%;
+    background-size: contain; // Changed to contain to show full image without distortion
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .card_content {
+    padding: 24px;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+
+  .cta {
+    font-size: 14px;
+  }
+}

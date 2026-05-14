@@ -12,5 +12,11 @@ export const SidebarContent = [
     title: 'Conversations',
     icon: conversationIcon,
     alt: 'Conversation Icon'
+  },
+  {
+    id: 3,
+    title: 'Settings',
+    icon: conversationIcon,
+    alt: 'Conversation Icon'
   }
 ];

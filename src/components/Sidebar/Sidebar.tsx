@@ -10,7 +10,7 @@ const Sidebar = () => {
         <div className={styles.logo}></div>
         <p>Soro AI</p>
       </div>
-      <div>
+      <div className={styles.navContainer}>
         {SidebarContent.map((item)=> {
           return <SidebarDisplay key={item.id} id={item.id} title={item.title} icon={item.icon} alt={item.alt}/>
         })}

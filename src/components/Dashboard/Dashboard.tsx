@@ -1,5 +1,5 @@
 import { Sidebar } from '../Sidebar';
-
+import {ConversationCard} from "../ConversationCard";
 import styles from './Dashboard.module.scss';
 
 const Dashboard = () => {
@@ -8,7 +8,13 @@ const Dashboard = () => {
           <div className={styles.container}>
               <Sidebar />
               <div className={styles.content}>
-                <p>This is the overview page</p>
+                <div className={styles.welcome}>
+                  <h1>Ẹ káàbọ̀,  Praise! 👋🏾</h1>
+                  <p>Let's continue your Yoruba  learning journey.</p>
+                </div>
+                <div>
+                  <ConversationCard />
+                </div>
               </div>
           </div>
       </div>

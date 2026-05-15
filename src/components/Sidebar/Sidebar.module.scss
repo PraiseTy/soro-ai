@@ -1,6 +1,6 @@
 .container {
   background-color: var(--grey-900);
-  height: 100vh;
+  /* desktop-only min-height moved to media query below so mobile layout isn't affected */
   color: var(--white);
   width: 300px;
   display: block;
@@ -44,7 +44,7 @@
     display: flex;
     align-items: center;
    margin: 0 24px 4px -45px;
-  padding-left: 45px;
+  padding: 16px 0 16px 45px;
 
   p {
     margin-left: 19px;
@@ -114,3 +114,11 @@
     border-bottom: 8px solid var(--purple-500);
   }
 }
+
+/* Desktop-only layout: ensure full-height sidebar on larger screens */
+@media (min-width: 1025px) {
+  .container {
+    min-height: 100vh;
+  }
+}
+

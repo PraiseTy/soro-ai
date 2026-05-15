@@ -1,9 +1,33 @@
 :root {
     --white: #ffffff;
+    --black: #000000;
     --grey-900: #201f24;
     --grey-700: #131317;
     --grey-500: #696868;
     --beige-500: #98908B;
     --beige-100: #f8f4f0;
     --purple-500: #8B5CF6;
+    --purple-300: #EEE7FF;
+    --green-500: #DCFCE7;
+
 }
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*background: linear-gradient(*/
+/*135deg,*/
+/*   #8B5CF6,*/
+/*   #A855F7,*/
+/*   #FBBF24*/
+/*);*/
+

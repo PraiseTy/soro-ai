@@ -1,1 +1,1 @@
-export {default as ConversationCard} from './ConversationCard';
+export { default as ConversationCard } from './ConversationCard';

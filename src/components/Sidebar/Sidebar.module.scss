@@ -1,0 +1,124 @@
+.container {
+  background-color: var(--grey-900);
+  /* desktop-only min-height moved to media query below so mobile layout isn't affected */
+  color: var(--white);
+  width: 300px;
+  display: block;
+
+}
+
+.logoContainer{
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin-bottom: 24px;
+}
+
+.logoContainer p {
+  margin: 20px 0 0 -70px; // Adds small left margin to bring text closer to logo
+}
+
+
+.logo{
+  display: block;
+  background-image: url("../../assets/images/logo.png");
+  width: 200px;
+  height:100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
+
+.navContainer {
+  margin: 0 0 0 45px;
+}
+
+.barIcon{
+  width: 25px;
+  height: 25px;
+}
+
+.sidebarItem {
+    display: flex;
+    align-items: center;
+   margin: 0 24px 4px -45px;
+  padding: 16px 0 16px 45px;
+
+  p {
+    margin-left: 19px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.highlighted {
+  background-color: var(--beige-100);
+  color: var(--grey-900);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+//Tablet & Mobile Screens
+@media(max-width: 1024px) {
+  .container {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logoContainer {
+    display: none;
+  }
+
+  .navContainer {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 12px 12px 0 12px;
+    background-color: var(--grey-900);
+    width: 100%;
+  }
+
+  .sidebarItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+
+    p {
+      margin-left: 0;
+      margin-top: 4px;
+      font-size: 12px;
+    }
+  }
+
+  .highlighted {
+    background-color: var(--beige-100);
+    color: var(--grey-900);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 5px 25px;
+    border-bottom: 8px solid var(--purple-500);
+  }
+}
+
+/* Desktop-only layout: ensure full-height sidebar on larger screens */
+@media (min-width: 1025px) {
+  .container {
+    min-height: 100vh;
+  }
+}
+
